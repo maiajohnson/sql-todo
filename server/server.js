@@ -76,7 +76,15 @@ app.put('/tasks/:id', (req, res) => {
     });
 });
 
-const port = 3000;
+// Used to check the information on how your computer is running atm
+// Environmental Variables!!
+// console.log('process.env', process.env);
+
+console.log('Your preferred port is', process.env.PORT);
+
+// const port = 3000;
+// OR ....
+const port = process.env.PORT || 3000;
 
 console.log(`We're going to listen on port`, port);
 app.listen(port, () => {
